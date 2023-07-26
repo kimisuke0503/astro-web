@@ -2,7 +2,17 @@
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        emphasis: ['Athelas', "sans-serif"],
+      },
+      colors: {
+        emphasis: "#00608d",
+      },
+      boxShadow: {
+        "card": "0 3px 15px 1px rgba(0,0,0,0.3)",
+      },
+    },
   },
   plugins: [],
 };
