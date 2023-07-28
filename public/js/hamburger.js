@@ -8,6 +8,6 @@ hamburger.addEventListener("click", () => {
 });
 
 overlay.addEventListener("click", () => {
-  overlay.classList.toggle("on");
-  subNav.classList.toggle("on");
+  overlay.classList.remove("on");
+  subNav.classList.remove("on");
 });

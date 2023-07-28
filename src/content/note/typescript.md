@@ -5,7 +5,7 @@
     draft: true
     tags: ["language"]
     slug: "typescript"
-    thumbnail: "/img/typescript.webp"
+    thumbnail: "typescript.webp"
 ---
 
 # Title

@@ -1,7 +1,12 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
+import GridContent from "../components/GridContent.astro";
+
+const allApps = await getCollection("app");
 ---
 
 <Layout
@@ -11,6 +16,41 @@ import Footer from "../components/Footer.astro";
 >
   <main>
     <Header />
+    <section class="p-10 pt-96">
+      <Card>
+        <div class="p-10">
+          <div class="mb-16">
+            <h1 class="page-title">App</h1>
+            <p class="page-description">過去の制作物を供養するページです。</p>
+          </div>
+          <section class="card-content-wrap">
+            {
+              allApps.map(app => (
+                <GridContent
+                  page="blog"
+                  slug={app.slug}
+                  title={app.data.title}
+                  tags={app.data.tags}
+                  thumbnail={app.data.thumbnail}
+                />
+              ))
+            }
+          </section>
+        </div>
+      </Card>
+    </section>
     <Footer />
   </main>
 </Layout>
+
+<style>
+  .page-title {
+    @apply mb-10 text-center font-emphasis text-7xl font-bold text-emphasis md:text-8xl;
+  }
+  .page-description {
+    @apply text-center font-emphasis text-[1.4rem] font-bold md:text-3xl;
+  }
+  .card-content-wrap {
+    @apply grid grid-cols-1 gap-10 sm:grid-cols-2;
+  }
+</style>

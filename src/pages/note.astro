@@ -4,9 +4,9 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Card from "../components/Card.astro";
+import GridContent from "../components/GridContent.astro";
 
 const allNotes = await getCollection("note");
-console.log(allNotes);
 ---
 
 <Layout
@@ -20,28 +20,19 @@ console.log(allNotes);
       <Card>
         <div class="p-10">
           <div class="mb-16">
-            <h1
-              class="text-center font-emphasis text-emphasis font-bold md:text-8xl text-7xl mb-10"
-            >
-              Note
-            </h1>
-            <p
-              class="text-center font-emphasis md:text-3xl text-[1.4rem] font-bold"
-            >
-              自分的技術メモです。
-            </p>
+            <h1 class="page-title">Note</h1>
+            <p class="page-description">自分的技術メモです。</p>
           </div>
-          <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-col-3 gap-10">
+          <section class="card-content-wrap">
             {
               allNotes.map(note => (
-                <div class="card-content">
-                  <Card>
-                    <a href={`/note/${note.slug}`}>
-                      <div class="card-content-title">{note.data.title}</div>
-                      <img src={`${note.data.thumbnail}`} />
-                    </a>
-                  </Card>
-                </div>
+                <GridContent
+                  page="note"
+                  slug={note.slug}
+                  title={note.data.title}
+                  tags={note.data.tags}
+                  thumbnail={note.data.thumbnail}
+                />
               ))
             }
           </section>
@@ -53,16 +44,13 @@ console.log(allNotes);
 </Layout>
 
 <style>
-  .card-content {
-    @apply flex flex-col justify-center;
+  .page-title {
+    @apply mb-10 text-center font-emphasis text-7xl font-bold text-emphasis md:text-8xl;
   }
-  .card-content-title {
-    @apply pb-5 text-center font-emphasis text-5xl font-bold text-emphasis md:text-6xl;
+  .page-description {
+    @apply text-center font-emphasis text-[1.4rem] font-bold md:text-3xl;
   }
-  .card-content a {
-    @apply p-5;
-  }
-  .card-content img {
-    @apply mx-auto w-2/3;
+  .card-content-wrap {
+    @apply grid grid-cols-1 gap-10 sm:grid-cols-2;
   }
 </style>

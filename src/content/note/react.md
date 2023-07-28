@@ -3,9 +3,9 @@
     description: "もりけんのreactノートです。"
     date: "2023-07-27"
     draft: true
-    tags: ["language"]
+    tags: ["js library"]
     slug: "react"
-    thumbnail: "/img/react.webp"
+    thumbnail: "react.webp"
 ---
 
 # Title

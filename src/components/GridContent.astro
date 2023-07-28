@@ -1,0 +1,43 @@
+---
+import Card from "./Card.astro";
+
+interface Props {
+  page: string;
+  slug: string;
+  title: string;
+  tags: string[];
+  thumbnail: string;
+}
+
+const { page, slug, title, tags, thumbnail } = Astro.props;
+---
+
+<div class="card-content">
+  <Card>
+    <a href={`/${page}/${slug}`}>
+      <div class="card-content-title">{title}</div>
+      <div class="flex flex-row flex-wrap px-10">
+        {tags.map(tag => <div class="content-tag">{tag}</div>)}
+      </div>
+      <img src={`/img/${thumbnail}`} />
+    </a>
+  </Card>
+</div>
+
+<style>
+  .card-content {
+    @apply flex flex-col justify-center;
+  }
+  .card-content-title {
+    @apply px-5 pb-5 text-center font-emphasis text-4xl font-bold text-emphasis md:text-5xl;
+  }
+  .card-content a {
+    @apply p-5;
+  }
+  .content-tag {
+    @apply mx-auto mb-5 w-fit rounded-full bg-gray-200 px-5;
+  }
+  .card-content img {
+    @apply mx-auto w-2/3;
+  }
+</style>

@@ -6,14 +6,14 @@
 <script src="/js/hamburger.js" defer></script>
 
 <header class="header-wrap">
-  <a href="../" class="my-auto"
-    ><h1 class="text-[1.8rem] font-bold">Moriken web</h1></a
-  >
+  <a href="/" class="my-auto">
+    <h1 class="text-[1.8rem] font-bold text-white">Moriken web</h1>
+  </a>
   <ul class="wide-nav">
-    <li class="top-bar-content"><a href="../">profile</a></li>
-    <li class="top-bar-content"><a href="../note">note</a></li>
-    <li class="top-bar-content"><a href="../blog">blog</a></li>
-    <li class="top-bar-content"><a href="../app">app</a></li>
+    <li class="top-bar-content"><a class="w-full" href="/">profile</a></li>
+    <li class="top-bar-content"><a href="/note">note</a></li>
+    <li class="top-bar-content"><a href="/blog">blog</a></li>
+    <li class="top-bar-content"><a href="/app">app</a></li>
   </ul>
   <div class="hamburger-btn">
     <span></span>
@@ -24,10 +24,10 @@
 <div class="overlay"></div>
 <div class="sub-nav">
   <ul>
-    <li class="top-bar-content"><a href="../">profile</a></li>
-    <li class="top-bar-content"><a href="../note">note</a></li>
-    <li class="top-bar-content"><a href="../blog">blog</a></li>
-    <li class="top-bar-content"><a href="../app">app</a></li>
+    <li><a href="/">profile</a></li>
+    <li><a href="/note">note</a></li>
+    <li><a href="/blog">blog</a></li>
+    <li><a href="/app">app</a></li>
   </ul>
 </div>
 
@@ -36,13 +36,17 @@
     @apply fixed z-0 flex w-full justify-between rounded-b-xl px-12 py-12 transition-all duration-300 md:px-28 md:py-10;
   }
   .top-bar-content {
-    @apply inline-block;
+    @apply inline-block w-full text-white;
   }
   .header--white {
     @apply bg-white py-8 opacity-90 shadow-lg;
   }
+  .header--white h1,
+  .header--white li {
+    @apply text-main_theme;
+  }
   .wide-nav {
-    @apply flex gap-20;
+    @apply flex items-center gap-20;
   }
   .overlay {
     @apply fixed z-[-10] h-[100vh] w-full;
@@ -73,7 +77,10 @@
       @apply flex cursor-pointer flex-col items-center justify-evenly gap-0.5;
     }
     .hamburger-btn span {
-      @apply h-1 w-10 bg-main_theme opacity-80 transition-all duration-500;
+      @apply h-1 w-10 bg-white opacity-80 transition-all duration-500;
+    }
+    .header--white .hamburger-btn span {
+      @apply bg-main_theme;
     }
   }
 </style>
