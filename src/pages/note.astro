@@ -1,7 +1,12 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
+
+const allNotes = await getCollection("note");
+console.log(allNotes);
 ---
 
 <Layout
@@ -11,6 +16,53 @@ import Footer from "../components/Footer.astro";
 >
   <main>
     <Header />
+    <section class="p-10 pt-96">
+      <Card>
+        <div class="p-10">
+          <div class="mb-16">
+            <h1
+              class="text-center font-emphasis text-emphasis font-bold md:text-8xl text-7xl mb-10"
+            >
+              Note
+            </h1>
+            <p
+              class="text-center font-emphasis md:text-3xl text-[1.4rem] font-bold"
+            >
+              自分的技術メモです。
+            </p>
+          </div>
+          <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-col-3 gap-10">
+            {
+              allNotes.map(note => (
+                <div class="card-content">
+                  <Card>
+                    <a href={`/note/${note.slug}`}>
+                      <div class="card-content-title">{note.data.title}</div>
+                      <img src={`${note.data.thumbnail}`} />
+                    </a>
+                  </Card>
+                </div>
+              ))
+            }
+          </section>
+        </div>
+      </Card>
+    </section>
     <Footer />
   </main>
 </Layout>
+
+<style>
+  .card-content {
+    @apply flex flex-col justify-center;
+  }
+  .card-content-title {
+    @apply pb-5 text-center font-emphasis text-5xl font-bold text-emphasis md:text-6xl;
+  }
+  .card-content a {
+    @apply p-5;
+  }
+  .card-content img {
+    @apply mx-auto w-2/3;
+  }
+</style>

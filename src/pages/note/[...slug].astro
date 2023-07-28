@@ -1,0 +1,20 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+
+export type Props = {
+  note: CollectionEntry<"note">;
+};
+
+export async function getStaticPaths() {
+  const noteEntries = await getCollection("note");
+  return noteEntries.map(note => ({
+    params: { slug: note.slug },
+    props: { note },
+  }));
+}
+
+const { note } = Astro.props;
+const { Content } = await note.render();
+---
+
+<Content />
