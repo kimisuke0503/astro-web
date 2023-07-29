@@ -107,9 +107,9 @@ const { blog } = Astro.props;
 const { Content } = await blog.render();　//render関数がmdファイルをhtmlに変換してくれる！
 ```
 
-コンテンツ管理部分のイメージです。レイアウトを作成した後は、ここにmdで記事を追加していくだけでコンテンツ管理ができます。
+<!-- コンテンツ管理部分のイメージです。レイアウトを作成した後は、ここにmdで記事を追加していくだけでコンテンツ管理ができます。
 
-![img](/public/img/blog-0729-1.webp)
+![img](/public/img/blog-0729-1.webp) -->
 
 ## 無駄 & 苦労話
 
