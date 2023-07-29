@@ -28,6 +28,7 @@ const appCollection = defineCollection({
     draft: z.boolean(),
     tags: z.array(z.string()),
     thumbnail: z.string(),
+    externalLink: z.string().optional(),
   }),
 });
 

@@ -27,11 +27,13 @@ const allApps = await getCollection("app");
             {
               allApps.map(app => (
                 <GridContent
-                  page="blog"
+                  page="app"
                   slug={app.slug}
                   title={app.data.title}
                   tags={app.data.tags}
                   thumbnail={app.data.thumbnail}
+                  externalLink={app.data.externalLink}
+                  appDescription={app.data.description}
                 />
               ))
             }

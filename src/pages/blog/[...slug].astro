@@ -7,19 +7,19 @@ import Card from "../../components/Card.astro";
 import MdBody from "../../components/MdBody.astro";
 
 export type Props = {
-  note: CollectionEntry<"note">;
+  blog: CollectionEntry<"blog">;
 };
 
 export async function getStaticPaths() {
-  const noteEntries = await getCollection("note");
-  return noteEntries.map(note => ({
-    params: { slug: note.slug },
-    props: { note },
+  const blogEntries = await getCollection("blog");
+  return blogEntries.map(blog => ({
+    params: { slug: blog.slug },
+    props: { blog },
   }));
 }
 
-const { note } = Astro.props;
-const { Content } = await note.render();
+const { blog } = Astro.props;
+const { Content } = await blog.render();
 ---
 
 <Layout

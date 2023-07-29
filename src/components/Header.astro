@@ -10,10 +10,18 @@
     <h1 class="text-[1.8rem] font-bold text-white">Moriken web</h1>
   </a>
   <ul class="wide-nav">
-    <li class="top-bar-content"><a class="w-full" href="/">profile</a></li>
-    <li class="top-bar-content"><a href="/note">note</a></li>
-    <li class="top-bar-content"><a href="/blog">blog</a></li>
-    <li class="top-bar-content"><a href="/app">app</a></li>
+    <li class="top-bar-content">
+      <a href="/"><p>profile</p></a>
+    </li>
+    <li class="top-bar-content">
+      <a href=" note"><p>note</p></a>
+    </li>
+    <li class="top-bar-content">
+      <a href="/blog"><p>blog</p></a>
+    </li>
+    <li class="top-bar-content">
+      <a href="/app"><p>app</p></a>
+    </li>
   </ul>
   <div class="hamburger-btn">
     <span></span>
@@ -33,10 +41,16 @@
 
 <style>
   .header-wrap {
-    @apply fixed z-0 flex w-full justify-between rounded-b-xl px-12 py-12 transition-all duration-300 md:px-28 md:py-10;
+    @apply fixed z-0 flex w-full justify-between rounded-b-xl px-12 py-12 transition-all duration-300 md:px-28 md:py-20;
+  }
+  .wide-nav {
+    @apply flex flex-row items-center gap-10;
   }
   .top-bar-content {
-    @apply inline-block w-full text-white;
+    @apply inline-block w-24 rounded-xl text-center text-white duration-100 ease-in-out;
+  }
+  .top-bar-content:hover {
+    @apply bg-gray-300 bg-opacity-50;
   }
   .header--white {
     @apply bg-white py-8 opacity-90 shadow-lg;
@@ -44,9 +58,6 @@
   .header--white h1,
   .header--white li {
     @apply text-main_theme;
-  }
-  .wide-nav {
-    @apply flex items-center gap-20;
   }
   .overlay {
     @apply fixed z-[-10] h-[100vh] w-full;

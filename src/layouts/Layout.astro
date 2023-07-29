@@ -8,7 +8,6 @@ interface Props {
 const { title, description, id } = Astro.props;
 ---
 
-<!DOCTYPE html>
 <html lang="ja">
   <head prefix="og: https://ogp.me/ns#">
     <meta charset="utf-8" />
@@ -57,12 +56,16 @@ const { title, description, id } = Astro.props;
     <meta name="twitter:image:src" content="/img/cat.webp" />
 
     <!-- TODO: Google tag (gtag.js) -->
+
+    <link rel="stylesheet" href="/style/prism-a11y-dark.css" />
   </head>
   <body id={id}>
-    <div class="cover"></div>
-    <slot />
+    <div class="cover">
+      <slot />
+    </div>
   </body>
 </html>
+
 <style is:global>
   * {
     margin: 0;

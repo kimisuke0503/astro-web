@@ -1,12 +1,10 @@
 ---
     title: "astro-web"
-    description: "もりけんの制作物供養ページです。"
+    description: "当ポートフォリオサイトです。Astrojsで開発し、vercelでホスティングしています。"
     date: "2023-07-28"
     draft: true
     tags: ["web site"]
-    slug: "create-web"
-    thumbnail: "astro-web.png"
+    slug: ""
+    thumbnail: "astro-web.webp"
+    externalLink: "https://astro-web-chi.vercel.app/"
 ---
-
-# Title
-

@@ -7,19 +7,23 @@ interface Props {
   title: string;
   tags: string[];
   thumbnail: string;
+  externalLink?: string;
+  appDescription?: string;
 }
 
-const { page, slug, title, tags, thumbnail } = Astro.props;
+const { page, slug, title, tags, thumbnail, externalLink, appDescription } =
+  Astro.props;
 ---
 
 <div class="card-content">
   <Card>
-    <a href={`/${page}/${slug}`}>
+    <a href={externalLink ?? `/${page}/${slug}`}>
       <div class="card-content-title">{title}</div>
       <div class="flex flex-row flex-wrap px-10">
         {tags.map(tag => <div class="content-tag">{tag}</div>)}
       </div>
       <img src={`/img/${thumbnail}`} />
+      <div class="app-description">{appDescription}</div>
     </a>
   </Card>
 </div>
@@ -39,5 +43,8 @@ const { page, slug, title, tags, thumbnail } = Astro.props;
   }
   .card-content img {
     @apply mx-auto w-2/3;
+  }
+  .app-description {
+    @apply mx-2 mt-2 text-center opacity-80 md:mx-5 md:mt-5;
   }
 </style>

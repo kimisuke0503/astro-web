@@ -1,0 +1,24 @@
+<div class="md-body-wrap p-10">
+  <slot />
+</div>
+
+<style is:global>
+  .md-body-wrap h1 {
+    @apply mb-10 font-emphasis text-5xl font-bold text-emphasis md:text-6xl;
+  }
+  .md-body-wrap h2 {
+    @apply my-10 text-3xl font-bold md:text-4xl;
+  }
+  .md-body-wrap h3 {
+    @apply my-8 font-bold;
+  }
+  .md-body-wrap ul {
+    @apply list-disc pl-10;
+  }
+  .md-body-wrap ol {
+    @apply list-decimal pl-10;
+  }
+  .md-body-wrap p {
+    @apply mb-5;
+  }
+</style>
