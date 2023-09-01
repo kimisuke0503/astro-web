@@ -14,111 +14,125 @@ import Card from "../components/Card.astro";
     <Header />
     <section class="md:px-10 px-5 pt-96">
       <Card>
-        <div class="flex flex-col gap-32 md:p-20 p-8">
-          <section class="md:flex justify-center items-center gap-32">
-            <img class="md:max-w-[18rem] max-w-[12rem]" src="/img/kimi.png" />
-            <div>
-              <div class="my-8">
-                <div
-                  class="font-emphasis text-emphasis font-bold md:text-6xl text-5xl mb-3"
-                >
-                  Kenryu Mouri
-                </div>
-                <div
-                  class="font-emphasis md:text-3xl text-[1.7rem] font-bold mb-3"
-                >
-                  Graduate Student / Software Engineer
+        <div class="flex justify-center">
+          <div
+            class="flex flex-col gap-32 md:py-20 md:px-32 p-8 max-w-[1040px]"
+          >
+            <section class="md:flex justify-center items-center gap-32">
+              <img class="md:max-w-[18rem] max-w-[12rem]" src="/img/kimi.png" />
+              <div>
+                <div class="my-8">
+                  <div
+                    class="font-emphasis text-emphasis font-bold md:text-6xl text-5xl mb-3"
+                  >
+                    Kenryu Mouri
+                  </div>
+                  <div
+                    class="font-emphasis md:text-3xl text-[1.7rem] font-bold mb-3"
+                  >
+                    Graduate Student / Software Engineer
+                  </div>
+                  <div>
+                    <a
+                      class="inline-block"
+                      href="https://github.com/kimisuke0503"
+                      ><img class="max-w-[2.5rem]" src="/img/github.webp" /></a
+                    >
+                  </div>
                 </div>
                 <div>
-                  <a class="inline-block" href="https://github.com/kimisuke0503"
-                    ><img class="max-w-[2.5rem]" src="/img/github.webp" /></a
-                  >
+                  <p>
+                    I major in information engineering at Osaka Metropolitan
+                    University.
+                  </p>
+                  <p>
+                    I'm interested in software development and work as intern at
+                    Next Finance Tech, Inc.
+                  </p>
+                  <p class="font-bold">
+                    The icon is my beloved cat in Hiroshima (my hometown).
+                  </p>
                 </div>
               </div>
-              <div>
+            </section>
+            <section>
+              <div class="section-title">Work/Education History</div>
+              <div class="section-content">
+                <ul class="w-[60rem]">
+                  <li class="history-li">
+                    <div class="history-li-title-wrap">
+                      <div class="history-li-title">
+                        Rresent<br /> | <br />Apr. 2022
+                      </div>
+                    </div>
+                    <div class="history-li-description">
+                      Master of Informatics, Osaka Metropolitan University.<br
+                      />Software Engineer (internship) at Next Finance Tech,
+                      Inc.
+                    </div>
+                  </li>
+                  <li class="history-li">
+                    <div class="history-li-title-wrap">
+                      <div class="history-li-title">
+                        Mar. 2022<br /> | <br />Apr. 2018
+                      </div>
+                    </div>
+                    <div class="history-li-description">
+                      Bachelor of Engineering, Osaka Metropolitan University.
+                    </div>
+                  </li>
+                  <li class="history-li">
+                    <div class="history-li-title-wrap">
+                      <div class="history-li-title">
+                        Mar. 2018<br /> | <br />May. 1999
+                      </div>
+                    </div>
+                    <div class="history-li-description">
+                      in Mihara and Onomichi, Hiroshima.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section>
+              <div class="section-title">Interest</div>
+              <div class="section-content">
                 <p>
-                  I major in information engineering at Osaka Metropolitan
-                  University.
-                </p>
-                <p>
-                  I'm interested in software development and work as intern at
-                  Next Finance Tech, Inc.
-                </p>
-                <p class="font-bold">
-                  The icon is my beloved cat in Hiroshima (my hometown).
+                  AWS cloud/Web development/Serverless architecture/Software
+                  solution with hardware
                 </p>
               </div>
-            </div>
-          </section>
-          <section>
-            <div class="section-title">Work/Education History</div>
-            <div class="section-content">
-              <ul class="w-[60rem]">
-                <li class="history-li">
-                  <div class="history-li-title-wrap">
-                    <div class="history-li-title">
-                      Rresent<br /> | <br />Apr. 2022
-                    </div>
-                  </div>
-                  <div class="history-li-description">
-                    Master of Informatics, Osaka Metropolitan University.<br
-                    />Software Engineer (internship) at Next Finance Tech, Inc.
-                  </div>
-                </li>
-                <li class="history-li">
-                  <div class="history-li-title-wrap">
-                    <div class="history-li-title">
-                      Mar. 2022<br /> | <br />Apr. 2018
-                    </div>
-                  </div>
-                  <div class="history-li-description">
-                    Bachelor of Engineering, Osaka Metropolitan University.
-                  </div>
-                </li>
-                <li class="history-li">
-                  <div class="history-li-title-wrap">
-                    <div class="history-li-title">
-                      Mar. 2018<br /> | <br />May. 1999
-                    </div>
-                  </div>
-                  <div class="history-li-description">
-                    in Mihara and Onomichi, Hiroshima.
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
-          <section>
-            <div class="section-title">Interest</div>
-            <div class="section-content">
-              <p>
-                AWS cloud/Web development/Serverless architecture/Software
-                solution with hardware
-              </p>
-            </div>
-          </section>
-          <section>
-            <div class="section-title">Academic Paper</div>
-            <div class="section-content">
-              <ul class="md:mx-28">
-                <li>
-                  Seiki Ubukata, Kenryu Mouri and Katsuhiro Honda, &quot;Basic
-                  Consideration of Collaborative Filtering Based on Rough
-                  Co-clustering Induced by Multinomial Mixture Models &quot; in
-                  International Conference on Soft Computing and Intelligent
-                  Systems and 23rd International Symposium on Advanced
-                  Intelligent Systems (SCIS&ISIS), Dec. 2022.
-                </li>
-                <li></li>
-              </ul>
-            </div>
-          </section>
-          <section>
-            <div class="section-title">Experience</div>
-            <div class="section-content">
-              <p>AWS-cdk/React/Nextjs/Astrojs/TailwindCSS</p>
-            </div>
-          </section>
+            </section>
+            <section>
+              <div class="section-title">Academic Paper</div>
+              <div class="section-content">
+                <ul class="md:mx-28">
+                  <li>
+                    Seiki Ubukata, Kenryu Mouri and Katsuhiro Honda, &quot;Basic
+                    Consideration of Collaborative Filtering Based on Rough
+                    Co-clustering Induced by Multinomial Mixture Models &quot;
+                    in Proc of International Conference on Soft Computing and
+                    Intelligent Systems and 23rd International Symposium on
+                    Advanced Intelligent Systems (SCIS&ISIS), Dec. 2022.
+                  </li>
+                  <br />
+                  <li>
+                    毛利憲竜, 生方誠希, 本多克宏,
+                    "粒状性を考慮したラフ集合ベースの
+                    混合多項分布型共クラスタリングに基づく協調フィルタリング",
+                    第 39 回ファジィシステムシンポジウム(FSS2023 軽井澤)
+                    講演論文集 2B4-1 , 2023年 9月.
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section>
+              <div class="section-title">Experience</div>
+              <div class="section-content">
+                <p>AWS-cdk/React/Nextjs/Astrojs/TailwindCSS</p>
+              </div>
+            </section>
+          </div>
         </div>
       </Card>
     </section>

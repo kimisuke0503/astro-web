@@ -31,10 +31,12 @@ const { Content } = await blog.render();
     <Header />
     <section class="md:px-10 px-5 pt-96">
       <Card>
-        <div class="md:p-10">
-          <MdBody>
-            <Content />
-          </MdBody>
+        <div class="flex justify-center">
+          <div class="md:p-10 max-w-[1040px]">
+            <MdBody>
+              <Content />
+            </MdBody>
+          </div>
         </div>
       </Card>
     </section>

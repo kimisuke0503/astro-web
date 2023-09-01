@@ -18,24 +18,26 @@ const allNotes = await getCollection("note");
     <Header />
     <section class="md:px-10 px-5 pt-96">
       <Card>
-        <div class="p-10">
-          <div class="mb-16">
-            <h1 class="page-title">Note</h1>
-            <p class="page-description">自分的技術メモです。</p>
+        <div class="flex justify-center">
+          <div class="p-10 max-w-[1040px]">
+            <div class="mb-16">
+              <h1 class="page-title">Note</h1>
+              <p class="page-description">自分的技術メモです。</p>
+            </div>
+            <section class="card-content-wrap">
+              {
+                allNotes.map(note => (
+                  <GridContent
+                    page="note"
+                    slug={note.slug}
+                    title={note.data.title}
+                    tags={note.data.tags}
+                    thumbnail={note.data.thumbnail}
+                  />
+                ))
+              }
+            </section>
           </div>
-          <section class="card-content-wrap">
-            {
-              allNotes.map(note => (
-                <GridContent
-                  page="note"
-                  slug={note.slug}
-                  title={note.data.title}
-                  tags={note.data.tags}
-                  thumbnail={note.data.thumbnail}
-                />
-              ))
-            }
-          </section>
         </div>
       </Card>
     </section>

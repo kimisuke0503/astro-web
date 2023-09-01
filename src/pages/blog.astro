@@ -18,26 +18,28 @@ const allBlogs = await getCollection("blog");
     <Header />
     <section class="md:px-10 px-5 pt-96">
       <Card>
-        <div class="p-10">
-          <div class="mb-16">
-            <h1 class="page-title">Blog</h1>
-            <p class="page-description">
-              なんでもブログです。技術、勉強、趣味、etc..
-            </p>
+        <div class="flex justify-center">
+          <div class="p-10 max-w-[1040px]">
+            <div class="mb-16">
+              <h1 class="page-title">Blog</h1>
+              <p class="page-description">
+                なんでもブログです。技術、勉強、趣味、etc..
+              </p>
+            </div>
+            <section class="card-content-wrap">
+              {
+                allBlogs.map(blog => (
+                  <GridContent
+                    page="blog"
+                    slug={blog.slug}
+                    title={blog.data.title}
+                    tags={blog.data.tags}
+                    thumbnail={blog.data.thumbnail}
+                  />
+                ))
+              }
+            </section>
           </div>
-          <section class="card-content-wrap">
-            {
-              allBlogs.map(blog => (
-                <GridContent
-                  page="blog"
-                  slug={blog.slug}
-                  title={blog.data.title}
-                  tags={blog.data.tags}
-                  thumbnail={blog.data.thumbnail}
-                />
-              ))
-            }
-          </section>
         </div>
       </Card>
     </section>

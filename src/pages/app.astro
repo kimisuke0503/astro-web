@@ -18,26 +18,28 @@ const allApps = await getCollection("app");
     <Header />
     <section class="md:px-10 px-5 pt-96">
       <Card>
-        <div class="p-10">
-          <div class="mb-16">
-            <h1 class="page-title">App</h1>
-            <p class="page-description">過去の制作物を供養するページです。</p>
+        <div class="flex justify-center">
+          <div class="p-10 max-w-[1040px]">
+            <div class="mb-16">
+              <h1 class="page-title">App</h1>
+              <p class="page-description">過去の制作物を供養するページです。</p>
+            </div>
+            <section class="card-content-wrap">
+              {
+                allApps.map(app => (
+                  <GridContent
+                    page="app"
+                    slug={app.slug}
+                    title={app.data.title}
+                    tags={app.data.tags}
+                    thumbnail={app.data.thumbnail}
+                    externalLink={app.data.externalLink}
+                    appDescription={app.data.description}
+                  />
+                ))
+              }
+            </section>
           </div>
-          <section class="card-content-wrap">
-            {
-              allApps.map(app => (
-                <GridContent
-                  page="app"
-                  slug={app.slug}
-                  title={app.data.title}
-                  tags={app.data.tags}
-                  thumbnail={app.data.thumbnail}
-                  externalLink={app.data.externalLink}
-                  appDescription={app.data.description}
-                />
-              ))
-            }
-          </section>
         </div>
       </Card>
     </section>
