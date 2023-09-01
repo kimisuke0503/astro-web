@@ -19,7 +19,7 @@
 
 ## ECR, ECS
 
-参考：https://zenn.dev/ryota_koba04/articles/c616c17d72603c
+参考：[zenn記事1](https://zenn.dev/ryota_koba04/articles/c616c17d72603c)
 ### Tips
 
 - ECSをデプロイした時、フリーズすることがよくある。コードが間違っていて正しくコンテナが立ち上がってないと確認リクエストを延々と送り続けてフリーズするので、ECSのタスク数を0にするととりあえずはフリーズを抜けられる。
