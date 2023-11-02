@@ -10,10 +10,7 @@ const config = {
   trailingComma: "es5",
   bracketSpacing: true,
   endOfLine: "lf",
-  plugins: [
-    require.resolve("prettier-plugin-astro"),
-    require("prettier-plugin-tailwindcss"),
-  ],
+  plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
   tailwindConfig: "./tailwind.config.cjs",
   overrides: [
     {
@@ -23,4 +20,4 @@ const config = {
   ],
 };
 
-module.exports = config;
+export default config;
