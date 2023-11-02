@@ -1,10 +1,10 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
+import { type CollectionEntry, getCollection } from "astro:content";
 import Card from "../../components/Card.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
 import MdBody from "../../components/MdBody.astro";
+import Layout from "../../layouts/Layout.astro";
 
 export type Props = {
   note: CollectionEntry<"note">;
@@ -29,10 +29,10 @@ const { Content } = await note.render();
 >
   <main>
     <Header />
-    <section class="md:px-10 px-5 pt-96">
+    <section class="px-5 pt-96 md:px-10">
       <Card>
-        <div class="md:flex justify-center">
-          <div class="md:p-10 max-w-[1040px]">
+        <div class="justify-center md:flex">
+          <div class="max-w-[1040px] md:p-10">
             <MdBody>
               <Content />
             </MdBody>

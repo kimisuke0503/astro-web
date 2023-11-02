@@ -32,8 +32,8 @@ const appCollection = defineCollection({
   }),
 });
 
-export const collections = <const>{
+export const collections = {
   note: noteCollection,
   blog: blogCollection,
   app: appCollection,
-};
+} as const;

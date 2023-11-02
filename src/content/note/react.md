@@ -7,7 +7,9 @@
     slug: "react"
     thumbnail: "react.webp"
 ---
+
 # React
 
 ## Tips
+
 - importの時とかにフォルダ名を指定すると、webpackは自動的にそのフォルダのindex.tsxを探してくれる

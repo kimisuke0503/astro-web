@@ -88,6 +88,7 @@ ReactやNextjsでtsxに親しんできた人は非常に扱いやすくていい
 ここが簡単なので今回Astrojs選定に至りました。`content/`配下にmdファイルをおいて、それらを以下のコードのようにそれぞれのページで受け取り、表示するという機能が標準で備わっていて、バックエンドを書く必要もなければCMSも導入する必要がないのが嬉しいポイントですねー。（正直ReactやNextjsでもできないことはないと思いますが、Astroはこの構成がビルトインで用意されているということがポイント高いです。）
 
 コード一部（伝われ）
+
 ```typescript
 import { CollectionEntry, getCollection } from "astro:content";
 
@@ -104,7 +105,7 @@ export async function getStaticPaths() {
 }
 
 const { blog } = Astro.props;
-const { Content } = await blog.render();　//render関数がmdファイルをhtmlに変換してくれる！
+const { Content } = await blog.render(); //render関数がmdファイルをhtmlに変換してくれる！
 ```
 
 <!-- コンテンツ管理部分のイメージです。レイアウトを作成した後は、ここにmdで記事を追加していくだけでコンテンツ管理ができます。

@@ -1,10 +1,10 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
 import GridContent from "../components/GridContent.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
 
 const allBlogs = await getCollection("blog");
 ---
@@ -16,10 +16,10 @@ const allBlogs = await getCollection("blog");
 >
   <main>
     <Header />
-    <section class="md:px-10 px-5 pt-96">
+    <section class="px-5 pt-96 md:px-10">
       <Card>
         <div class="flex justify-center">
-          <div class="p-10 max-w-[1040px]">
+          <div class="max-w-[1040px] p-10">
             <div class="mb-16">
               <h1 class="page-title">Blog</h1>
               <p class="page-description">
