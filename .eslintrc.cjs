@@ -61,6 +61,8 @@ module.exports = {
     "tailwindcss/no-custom-classname": "off",
     "@typescript-eslint/no-unsafe-assignment": "off", // FIXME: bug with astro files (lint crashes)
     "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
   },
   overrides: [
     {
