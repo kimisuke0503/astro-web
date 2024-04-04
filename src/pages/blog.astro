@@ -35,6 +35,7 @@ const allBlogs = await getCollection("blog");
                     title={blog.data.title}
                     tags={blog.data.tags}
                     thumbnail={blog.data.thumbnail}
+                    externalLink={blog.data.externalLink}
                   />
                 ))
               }
