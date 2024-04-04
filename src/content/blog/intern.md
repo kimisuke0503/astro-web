@@ -4,7 +4,7 @@
     date: "2024-03-31"
     draft: true
     tags: ["intern"]
-    slug: ""
+    slug: "intern"
     thumbnail: "nft-mori.webp"
     externalLink: "https://note.com/moriken_53/n/n00ab6904b5e3"
 ---
