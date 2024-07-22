@@ -20,15 +20,15 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@astrojs/compiler@^1.0.1", "@astrojs/compiler@^1.4.2", "@astrojs/compiler@^1.5.5", "@astrojs/compiler@^1.8.0":
+"@astrojs/compiler@^1.0.1", "@astrojs/compiler@^1.4.2", "@astrojs/compiler@^1.8.0":
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-1.8.2.tgz#f305d5724c45a9932a8ef4e87b2e7227d15d1c2b"
   integrity sha512-o/ObKgtMzl8SlpIdzaxFnt7SATKPxu4oIP/1NL+HDJRzxfJcAkOTAb/ZKMRyULbz4q+1t2/DAebs2Z1QairkZw==
 
-"@astrojs/compiler@^2.0.0":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.2.1.tgz#1403f270e40e14043b7cf16d8e18083537348bda"
-  integrity sha512-NJ1lWKzMkyEjE3W5NpPNAVot4/PLF5om/P6ekxNu3iLS05CaYFTcp7WpYMjdCC252b7wkNVAs45FNkVQ+RHW/g==
+"@astrojs/compiler@^2.0.0", "@astrojs/compiler@^2.9.1":
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.9.2.tgz#c01dcdb14dc938758e66f9856934b83b6cd986d1"
+  integrity sha512-Vpu0Ffsj8SoV+N0DFHlxxOMKHwSC9059Xy/OlG1t6uFYSoJXxkBC2WyF6igO7x10V+8uJrhOxaXr3nA90kJXow==
 
 "@astrojs/internal-helpers@^0.1.2":
   version "0.1.2"
@@ -3852,12 +3852,12 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier-plugin-astro@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-astro/-/prettier-plugin-astro-0.14.0.tgz#035bb78b7b8a45b4ab7c5b926f73850af9afffb6"
-  integrity sha512-7jRGJsexaRIyUzTk8uzXlP45cw6DQ5Ci4bTe0xCBCcuO1Fff8jJy9oI+kRCQKSdDFTSAArMSg8GpvzlKBtSaZA==
+prettier-plugin-astro@^0.14.1:
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-astro/-/prettier-plugin-astro-0.14.1.tgz#50bff8a659f2a6a4ff3b1d7ea73f2de93c95b213"
+  integrity sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==
   dependencies:
-    "@astrojs/compiler" "^1.5.5"
+    "@astrojs/compiler" "^2.9.1"
     prettier "^3.0.0"
     sass-formatter "^0.7.6"
 
