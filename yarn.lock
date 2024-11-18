@@ -1175,10 +1175,10 @@ arraybuffer.prototype.slice@^1.0.3:
     is-array-buffer "^3.0.4"
     is-shared-array-buffer "^1.0.2"
 
-astro-eslint-parser@^1.0.2, astro-eslint-parser@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/astro-eslint-parser/-/astro-eslint-parser-1.0.3.tgz#9cf4511c59231ae176a8b82f13ac2aa5f7876b04"
-  integrity sha512-AGsGgcg7Jg9UpyCDgvl/EkdYpe1oMkFdmC2Zl+KWneoieLCtQIFjmcY8yt41gcNx4mby0w8BBJQcBmPuf8UAoQ==
+astro-eslint-parser@^1.0.2, astro-eslint-parser@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/astro-eslint-parser/-/astro-eslint-parser-1.1.0.tgz#4570e96c449751a042b857a749a94c0ff399cc2c"
+  integrity sha512-F6NW1RJo5pp2kPnnM97M5Ohw8zAGjv83MpxHqfAochH68n/kiXN57+hYaNUCA7XkScoVNr6yzvly3hsY34TGfQ==
   dependencies:
     "@astrojs/compiler" "^2.0.0"
     "@typescript-eslint/scope-manager" "^7.0.0 || ^8.0.0"
